@@ -737,6 +737,18 @@ document.getElementById('btnLeave').disabled = true;
  <script>
 const ADMIN_PASSWORD = "küslerbarışsın"; 
 </script>
+
+ <div id="controls" style="display:none;">
+  <button onclick="start()">Başlat</button>
+  <button onclick="stop()">Durdur</button>
+</div>
+
+ <script>
+const params = new URLSearchParams(window.location.search);
+if (params.get("admin") === "1234") {
+  document.getElementById("controls").style.display = "block";
+}
+</script>
  
 </body>
 </html>
